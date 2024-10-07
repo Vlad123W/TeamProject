@@ -10,8 +10,8 @@ void countingSort(int arr[], int size) {
         }
     }
 
-    // Створюємо масив для підрахунку елементів
-    int count[maxElement + 1] = { 0 };  // Ініціалізуємо масив з нулями
+    // Створюємо динамічний масив для підрахунку елементів
+    int* count = new int[maxElement + 1]();  // Ініціалізуємо масив з нулями
 
     // Підраховуємо кількість кожного елемента
     for (int i = 0; i < size; i++) {
@@ -26,6 +26,9 @@ void countingSort(int arr[], int size) {
             count[i]--;
         }
     }
+
+    // Звільняємо пам'ять
+    delete[] count;
 }
 
 int main() {
