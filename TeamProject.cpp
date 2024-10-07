@@ -34,7 +34,8 @@ void countingSort(int arr[], int size)
     int maxElement = arr[0];
     for (int i = 1; i < size; i++) 
     {
-        if (arr[i] > maxElement) {
+        if (arr[i] > maxElement) 
+        {
             maxElement = arr[i];
         }
     }
