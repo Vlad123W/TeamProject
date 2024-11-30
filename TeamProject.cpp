@@ -7,13 +7,16 @@ void countingSort(int arr[], int size);
 int main() 
 {
     int arr[] = { 4, 2, 2, 8, 3, 3, 1 };
+
     int size = sizeof(arr) / sizeof(arr[0]);  // Розмір масиву
 
     cout << "Array: ";
+
     for (int i = 0; i < size; i++) 
     {
         cout << arr[i] << " ";
     }
+
     cout << endl;
 
     countingSort(arr, size);  // Викликаємо функцію сортування
