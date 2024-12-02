@@ -35,10 +35,16 @@ int main()
 
     // створення динамічного масиву для зберігання відповідей
     int* responses = new int[numRespondents];
-    cout << "Enter the responses (integer values):" << endl;
+    cout << "Enter the responses (The value must be greater than 0):" << endl;
     for (int i = 0; i < numRespondents; i++)
     {
         cin >> responses[i];
+        while (responses[i] <= 0)
+        {
+            cout << "The value must be greater than 0." << endl;
+            cout << "Enter the value: " << endl;
+            cin >> responses[i];
+        }
     }
 
     // змінні для максимального варіанту та масиву підрахунку
